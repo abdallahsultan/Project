@@ -32,7 +32,7 @@ return [
     'facebook' => [
         'client_id' => '330899387965528',
         'client_secret' => 'c20592e4ae96271e5a96c9057792a963',
-        'redirect' => 'https://start-team.co/project/Project/public/callback/facebook',
+        'redirect' => 'https://star-team.co/project/Project/public/callback/facebook',
     ],
 
 ];
