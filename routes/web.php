@@ -28,3 +28,5 @@ Route::post('/register/customer', 'Auth\RegisterController@createCustomer');
 
 Route::get('auth/facebook', 'Auth\LoginController@redirectToFacebook');
 Route::get('callback/facebook', 'Auth\LoginController@handleFacebookCallback'); 
+Route::get('auth/google', 'Auth\LoginController@redirectToGoogle');
+Route::get('callback/google', 'Auth\LoginController@handleGoogleCallback'); 

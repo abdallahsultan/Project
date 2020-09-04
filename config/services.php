@@ -34,5 +34,10 @@ return [
         'client_secret' => 'c20592e4ae96271e5a96c9057792a963',
         'redirect' => 'https://star-team.co/project/Project/public/callback/facebook',
     ],
+    'google' => [
+        'client_id' => '430065149648-r2hm84oafb6kkgh36cgolc3bbsq5qdhp.apps.googleusercontent.com',
+        'client_secret' => '6r03qJyeDCCeNzLoab2LY8ta',
+        'redirect' => 'https://star-team.co/project/Project/public/callback/google',
+    ],
 
 ];

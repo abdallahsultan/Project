@@ -63,9 +63,12 @@ class LoginController extends Controller
     public function redirectToFacebook() {
         return Socialite::driver('facebook')->redirect();
     }
-    public function handleFacebookCallback() {
+    public function redirectToGoogle() {
+        return Socialite::driver('google')->redirect();
+    }
+    public function handleGoogleCallback() {
         try {
-            $user = Socialite::driver('facebook')->user();
+            $user = Socialite::driver('google')->user();
             dd($user);
             $finduser = User::where('facebook_id', $user->id)->first();
             if ($finduser) {
