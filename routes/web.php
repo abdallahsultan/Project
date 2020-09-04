@@ -27,4 +27,4 @@ Route::post('/register/customer', 'Auth\RegisterController@createCustomer');
 
 
 Route::get('auth/facebook', 'Auth\LoginController@redirectToFacebook');
-Route::get('auth/facebook/callback', 'Auth\LoginController@handleFacebookCallback'); 
+Route::get('facebook/callback', 'Auth\LoginController@handleFacebookCallback'); 
