@@ -32,7 +32,7 @@ return [
     'facebook' => [
         'client_id' => '330899387965528',
         'client_secret' => 'c20592e4ae96271e5a96c9057792a963',
-        'redirect' => url('/callback/facebook'),
+        'redirect' => url('/').'/callback/facebook',
     ],
 
 ];
