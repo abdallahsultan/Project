@@ -76,12 +76,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         </div>
         <div class="info">
           <a href="#" class="d-block">
-          @if(Auth::guard('customer')->check())
-          {{Auth::guard('customer')->user()->name}}
-          @else
-          {{Auth::user()->name}}
-          @endif
-          
+        
           </a>
         </div>
       </div>
@@ -91,15 +86,36 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-         
-          <li class="nav-item">
-            <router-link to="/dashboard" class="nav-link">dashboard</router-link>
-           
+          <li class="nav-item has-treeview menu-open">
+            <a href="#" class="nav-link active">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                Starter Pages
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <router-link to="/dashboard" class="nav-link ">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>dashboard</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <router-link to="/profile" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>profile</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <router-link to="/user" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Users</p>
+                </a>
+              </li>
+            </ul>
           </li>
-          <li class="nav-item">
-            <router-link to="/profile" class="nav-link">profile</router-link>
-           
-          </li>
+       
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
@@ -115,7 +131,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
     <!-- Main content -->
     <div class="content">
-     @yield('content')
+    <router-view></router-view>
+    <vue-progress-bar></vue-progress-bar>
+
     </div>
     <!-- /.content -->
   </div>
